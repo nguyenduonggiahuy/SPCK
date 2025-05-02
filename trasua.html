@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trà Sữa Mọt Mèo</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/trasua.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">Trà Sữa Mọt Mèo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./trasua.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Đặt hàng</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Liên hệ</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center">
+          <a href="./balance.html" class="btn btn-milk-tea me-3" id="wallet-btn" style="display: none;">
+            <i class="fas fa-wallet me-2"></i>Ví tiền
+          </a>
+          <div class="dropdown">
+            <button class="profile-btn dropdown-toggle" type="button" id="profile-dropdown"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user-circle"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile-dropdown" id="author-menu-drd">
+              <!-- Dynamic content will be inserted here by JavaScript -->
+              <li><a class="dropdown-item" href="./login.html"><i class="fas fa-sign-in-alt me-2"></i>Đăng nhập</a></li>
+              <li><a class="dropdown-item" href="./register.html"><i class="fas fa-user-plus me-2"></i>Đăng ký</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="milk-tea-hero">
+    <div class="container">
+      <h1>Trà Sữa Mọt Mèo</h1>
+      <p>Ngon ngất ngây – Ngọt ngào từng giọt</p>
+    </div>
+  </header>
+
+  <!-- Products Section -->
+  <section class="milk-tea-products">
+    <div class="container">
+      <h2 class="section-title">Menu Trà Sữa Hot Nhất</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="milk-tea-card">
+            <img src="./img/huong-dan-cach-lam-tra-sua-tran-chau-duong-den-202201211537260116.jpg" alt="Trà Sữa Trân Châu" class="milk-tea-img">
+            <div class="milk-tea-body">
+              <h3 class="milk-tea-title">Trà Sữa Trân Châu Đường Đen</h3>
+              <p class="milk-tea-description">Trà sữa thơm ngon kết hợp với trân châu đường đen dai mềm, ngọt thanh.</p>
+              <div class="milk-tea-price">35.000đ</div>
+              <a href="#" class="btn btn-milk-tea w-100">Đặt ngay</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="milk-tea-card">
+            <img src="./img/word-image-609-2.jpg" alt="Trà Sữa Matcha" class="milk-tea-img">
+            <div class="milk-tea-body">
+              <h3 class="milk-tea-title">Trà Sữa Matcha Kem Cheese</h3>
+              <p class="milk-tea-description">Matcha Nhật Bản kết hợp với lớp kem cheese béo ngậy, vị thanh mát.</p>
+              <div class="milk-tea-price">40.000đ</div>
+              <a href="#" class="btn btn-milk-tea w-100">Đặt ngay</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="milk-tea-card">
+            <img src="./img/cach-lam-tra-sua-khoai-mon-1.jpg" alt="Trà Sữa Khoai Môn" class="milk-tea-img">
+            <div class="milk-tea-body">
+              <h3 class="milk-tea-title">Trà sữa Khoai Môn</h3>
+              <p class="milk-tea-description">Khoai môn thơm ngon, vị béo ngậy đặc trưng, thêm topping trân châu trắng.</p>
+              <div class="milk-tea-price">38.000đ</div>
+              <a href="#" class="btn btn-milk-tea w-100">Đặt ngay</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="footer-logo">Trà Sữa Mọt Mèo</div>
+          <p>Mang đến hương vị trà sữa ngọt ngào cho cuộc sống thêm vui</p>
+          <div class="social-icons mt-3">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="footer-links">
+            <h4>Liên kết nhanh</h4>
+            <ul>
+              <li><a href="./index.html">Trang chủ</a></li>
+              <li><a href="./trasua.html">Menu</a></li>
+              <li><a href="#">Đặt hàng</a></li>
+              <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="footer-links">
+            <h4>Liên hệ</h4>
+            <ul>
+              <li><i class="fas fa-map-marker-alt me-2"></i> 123 Đường Trà Sữa, Quận 1, TP.HCM</li>
+              <li><i class="fas fa-phone me-2"></i> (028) 1234 5678</li>
+              <li><i class="fas fa-envelope me-2"></i> info@motsua.com</li>
+              <li><i class="fas fa-clock me-2"></i> Mở cửa: 8:00 - 22:00 hàng ngày</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Trà Sữa Mọt Mèo. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Boostrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"></script>
+  <!-- FireBase -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-app-compat.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-firestore-compat.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-storage-compat.min.js"></script>
+
+  <!-- FireBase Authentication -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-auth-compat.min.js" integrity="sha512-CGUF+dWcHYjNE9r1tL1/sQMrkjl/dyY8+bKdmqnplDUJQ27LvTXneYIBK++44GDjetxGojYGxbzbHNBtEBzUuw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Functions -->
+  <script>
+    let userSession = JSON.parse(localStorage.getItem('user_session'));
+  </script>
+  <script src="./js/firebase-config.js"></script>
+  <script src="./js/guest.js"></script>
+  <script src="./js/check_session.js"></script>
+</body>
+</html>
