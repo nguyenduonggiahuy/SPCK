@@ -69,6 +69,13 @@
       font-size: 16px;
       cursor: pointer;
       margin-top: 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .buy-button:hover {
+      background-color: #5a3d2a;
+      color: white;
     }
 
     footer {
@@ -76,6 +83,10 @@
       text-align: center;
       padding: 20px;
       margin-top: 50px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
     }
   </style>
 </head>
@@ -89,7 +100,7 @@
   <div class="container">
     <div class="product-info">
       <div class="product-image">
-        <img src="./img/thi-truong-voi-nhieu-cach-pha-che-moi-ngon-mieng-dep-mat-thu-hut-khau-vi-nhieu-nguoi-anh-nhu-quyen-17352981924951185008271-203-0-939-1178-crop-17352983619411375959734.webp" alt="Cà Phê Robusta">
+        <img src="./img/Cà Phê Robusta.webp" alt="Cà Phê Robusta">
       </div>
       <div class="product-details">
         <h2>Giới thiệu sản phẩm</h2>
@@ -97,9 +108,7 @@
         <p><strong>Giá:</strong> 120.000đ / 500g</p>
         <p><strong>Xuất xứ:</strong> Buôn Ma Thuột, Việt Nam</p>
         <p><strong>Hương vị:</strong> Đậm, hậu vị đắng nhẹ, mùi thơm đặc trưng</p>
-        <button class="buy-button">
-            <a class="buy-button" href="./order.html">Liên hệ đặt hàng</a>
-        </button>
+        <a href="./order.html?productId=robusta&name=Cà Phê Robusta&price=120000&image=img/Cà Phê Robusta.webp" class="buy-button">Đặt hàng</a>
       </div>
     </div>
   </div>
@@ -118,5 +127,6 @@
       let userSession = JSON.parse(localStorage.getItem('user_session'));
   </script>
   <script src="./js/firebase-config.js"></script>
+  <script src="./js/check_session.js"></script>
 </body>
 </html>

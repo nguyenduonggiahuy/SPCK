@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký - Coffee House</title>
-    <!-- Boostrap 5 CSS -->
+    <title>Đăng ký - Morning Coffee</title>
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -13,110 +13,79 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            background-color: #3e2723;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-image: url(./img/artworks_4tp2ztwxs9uykyeq_faeimg_t500x500.webp);
-        }
 
-        h1 {
-            font-size: 2.5rem;
-        }
-
-        .form-container {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            width: 300px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        label {
-            display: block;
-            font-size: 1rem;
-        }
-
-        input {
-            width: 100%;
-            padding: 8px;
-            border: none;
-            border-radius: 5px;
-            margin-top: 5px;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-            background-color: #81c784;
-            color: white;
-            width: 100%;
-        }
-
-        .btn:hover {
-            background-color: #66bb6a;
-        }
-    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/login-register.css">
 </head>
 
 <body>
-    <h1>Đăng kí</h1>
-    <div class="form-container">
-        <form action="" method="POST" id="register-form">
-            <div class="form-group">
-                <label for="username">Tên đăng kí </label>
-                <input type="text" id="inp-username" name="username" required>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Morning Coffee</a>
+        </div>
+    </nav>
+
+    <!-- Auth Container -->
+    <div class="auth-container">
+        <div class="auth-card">
+            <h1 class="auth-title">Đăng ký tài khoản</h1>
+            <form action="" method="POST" id="register-form">
+                <div class="mb-3">
+                    <label for="inp-username" class="form-label">Tên người dùng</label>
+                    <input type="text" class="form-control" id="inp-username" name="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Mật khẩu</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div class="mb-4">
+                    <label for="cfpassword" class="form-label">Nhập lại mật khẩu</label>
+                    <input type="password" class="form-control" id="cfpassword" name="cfpassword" required>
+                </div>
+                <button type="submit" class="btn btn-auth">Đăng ký</button>
+            </form>
+            <div class="auth-footer">
+                <p>Đã có tài khoản? <a href="./login.html" class="auth-link">Đăng nhập ngay</a></p>
             </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Mật khẩu:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Nhập lại Mật khẩu:</label>
-                <input type="password" id="cfpassword" name="password" required>
-            </div>
-            <button type="submit" class="btn">Đăng kí</button>
-        </form>
+        </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Morning Coffee. All rights reserved.</p>
+        </div>
+    </footer>
+
     <!-- Boostrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-
     <!-- FireBase -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-app-compat.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-firestore-compat.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-storage-compat.min.js"></script>
 
     <!-- FireBase Authentication -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-auth-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-auth-compat.min.js"
+        integrity="sha512-CGUF+dWcHYjNE9r1tL1/sQMrkjl/dyY8+bKdmqnplDUJQ27LvTXneYIBK++44GDjetxGojYGxbzbHNBtEBzUuw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- Functions -->
     <script>
         let userSession = JSON.parse(localStorage.getItem('user_session'));
     </script>
-    <script src="../js/firebase-config.js"></script>
-    <script src="../js/register.js"></script>
+    <!-- Login Script -->
+    <script src="./js/firebase-config.js"></script>
+    <script src="./js/register.js"></script>
+    <script src="./js/check_session.js"></script>
 </body>
 
 </html>

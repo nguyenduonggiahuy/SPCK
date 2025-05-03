@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ví</title>
-
-    <!-- Boostrap 5 CSS -->
+    <title>Ví Tiền - Morning Coffee</title>
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -15,121 +14,134 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/guest.css">
-
-
+    <link rel="stylesheet" href="./css/balance.css">
 </head>
 
 <body>
-        <div class="page-content">
-            <div class="container">
-                <a href="./index.html" class="text-decoration-none text-black">
-                    <i class="fa-solid fa-chevron-left"></i> Về Menu
-                </a>
-                <h3 class="my-2">Nạp tiền vào ví</h3>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Morning Coffee</a>
+        </div>
+    </nav>
 
-                <div class="row">
-                    <div class="col-md-6 col-12">
+    <!-- Main Content -->
+    <div class="page-content">
+        <div class="balance-container">
+            <a href="./index.html" class="back-link">
+                <i class="fa-solid fa-chevron-left me-2"></i> Về Menu
+            </a>
+            <h2 class="balance-header">Nạp tiền vào ví</h2>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="balance-card">
                         <form action="" id="balance-form">
-                            <div class="form-group mt-2">
-                                <label for="">Số tài khoản</label>
-                                <input type="text" class="form-control" id="card-number" required>
+                            <div class="mb-3">
+                                <label for="card-number" class="form-label">Số tài khoản</label>
+                                <input type="text" class="form-control" id="card-number" placeholder="Nhập số tài khoản" required>
                             </div>
-                            <div class="form-group mt-2">
-                                <label for="">Chọn ngân hàng</label>
-                                <select type="text" class="form-control" id="card-number">
-                                    <option value="">Vietcombank</option>
-                                    <option value="">Viettinbank</option>
-                                    <option value="">Techcombank</option>
-                                    <option value="">BIDV</option>
-                                    <option value="">MB Bank</option>
+                            <div class="mb-3">
+                                <label for="bank-select" class="form-label">Chọn ngân hàng</label>
+                                <select class="form-control" id="bank-select" required>
+                                    <option value="" disabled selected>-- Chọn ngân hàng --</option>
+                                    <option value="vietcombank">Vietcombank</option>
+                                    <option value="viettinbank">Viettinbank</option>
+                                    <option value="techcombank">Techcombank</option>
+                                    <option value="bidv">BIDV</option>
+                                    <option value="mbbank">MB Bank</option>
                                 </select>
                             </div>
-
-                            <div class="form-group mt-2">
-                                <label for="">Số tiền</label>
-                                <input type="number" class="form-control" id="amount" required min="0">
+                            <div class="mb-4">
+                                <label for="amount" class="form-label">Số tiền (VND)</label>
+                                <input type="number" class="form-control" id="amount" placeholder="Nhập số tiền" required min="10000" step="1000">
                             </div>
-
-                            <div class="form-group mt-2">
-                                <button type="submit" class="btn btn-primary">Xác nhận</button>
-                            </div>
+                            <button type="submit" class="btn btn-balance">Xác nhận nạp tiền</button>
                         </form>
                     </div>
-                    <div class="col-md-6 col-12">
-                        <h5 class="current-balance"><span>Số dư: </span><span class="balance-number"></span></h5>
+                </div>
+                <div class="col-lg-6">
+                    <div class="balance-card">
+                        <h4 class="current-balance"><span>Số dư hiện tại: </span><span class="balance-number">0 đ</span></h4>
+                        <div class="transaction-history">
+                            <h5>Lịch sử giao dịch</h5>
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i> Bạn chưa có giao dịch nào
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <footer>
-            <div class="container">
-                <div class="row h-100 content"style="background-image: url(./img/istockphoto-464516754-612x612.jpg);
-                background-repeat: no-repeat;
-                background-size: cover;
-                margin-top: 40px;">>
-                    <div class="col-md-4 item">
-                        <h5>About Us</h5>
-                        <ul>
-                            <li>
-                                <span><b>Địa chỉ: </b></span>
-                                <span>Tầng 5, 71 Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Hà Nội</span>
-                            </li>
-                        </ul>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Về chúng tôi</h5>
+                    <ul class="footer-list">
+                        <li>
+                            <span><i class="fas fa-map-marker-alt me-2"></i></span>
+                            <span>Tầng 5, 71 Nguyễn Chí Thanh, Phường Láng Hạ, Quận Đống Đa, Hà Nội</span>
+                        </li>
+                        <li>
+                            <span><i class="fas fa-clock me-2"></i></span>
+                            <span>Mở cửa: 7:00 - 22:00 hàng ngày</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Nhận bản tin</h5>
+                    <div class="d-flex">
+                        <input type="text" class="form-control newsletter-input" placeholder="Nhập email của bạn">
+                        <button class="btn btn-primary newsletter-btn">Gửi</button>
                     </div>
-                    <div class="col-md-4 item">
-                        <h5>Newsletter</h5>
-                        <div class="d-flex footer-form">
-                            <input type="text" placeholder="Enter email">
-                            <button class="btn btn-primary py-2 px-4">Gửi</button>
-                        </div>
-                    </div>
-                    <div class="col-md-4 item">
-                        <h5>Follow Us</h5>
-                        <div>
-                            <h6><i>Hotline</i></h6>
-                            <ul>
-                                <li><span>Hà Nội: </span>02477717888</li>
-                                <li><span>Tp.HCM: </span>02877717789</li>
-                            </ul>
-                        </div>
-                        <div class="social-media">
-                            <a href="https://www.facebook.com/mindxschool" class="me-2 text-white">
-                                <i class="fa-brands fa-facebook-f p-2 bg-primary rounded-sm"></i>
-                            </a>
-                            <a href="https://www.facebook.com/mindxschool" class="me-2 text-white">
-                                <i class="fa-brands fa-instagram p-2 me-2 bg-primary rounded-sm"></i>
-                            </a>
-                        </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Liên hệ</h5>
+                    <ul class="footer-list">
+                        <li><i class="fas fa-phone me-2"></i> Hà Nội: 02477717888</li>
+                        <li><i class="fas fa-phone me-2"></i> TP.HCM: 02877717789</li>
+                    </ul>
+                    <div class="social-media mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
-
+            <div class="text-center pt-3">
+                <p>&copy; 2023 Morning Coffee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Boostrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-
     <!-- FireBase -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-app-compat.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-firestore-compat.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-storage-compat.min.js"></script>
-    
+
     <!-- FireBase Authentication -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-auth-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-auth-compat.min.js"
+        integrity="sha512-CGUF+dWcHYjNE9r1tL1/sQMrkjl/dyY8+bKdmqnplDUJQ27LvTXneYIBK++44GDjetxGojYGxbzbHNBtEBzUuw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Functions -->
     <script>
         let userSession = JSON.parse(localStorage.getItem('user_session'));
     </script>
     <script src="./js/firebase-config.js"></script>
-    <script src="./js/guest.js"></script>
     <script src="./js/balance.js"></script>
+    <script src="./js/check_session.js"></script>
 </body>
 
 </html>
