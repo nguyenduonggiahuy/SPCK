@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Combo Trà Sữa Khoai Môn</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdf6ff;
+      color: #333;
+    }
+
+    header {
+      background-color: #6b4c7b;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    .product-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-image img {
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .product-details {
+      max-width: 500px;
+    }
+
+    .product-details h2 {
+      margin-bottom: 10px;
+      color: #5a3e66;
+    }
+
+    .product-details p {
+      line-height: 1.6;
+    }
+
+    .highlight {
+      background: #f8eaff;
+      padding: 10px;
+      border-left: 5px solid #ba68c8;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    .buy-button {
+      background-color: #7e57c2;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    footer {
+      background-color: #ddd;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Combo Trà Sữa Khoai Môn</h1>
+    <p>Ngọt dịu – Mịn mượt – Hương vị khó quên</p>
+  </header>
+
+  <div class="container">
+    <div class="product-info">
+      <div class="product-image">
+        <img src="./img/cach-lam-tra-sua-khoai-mon-1.jpg" alt="Trà Sữa Khoai Môn">
+      </div>
+      <div class="product-details">
+        <h2>Chi tiết combo</h2>
+        <p>Combo bao gồm:</p>
+        <ul>
+          <li>✅ 4 ly trà sữa khoai môn size lớn (700ml)</li>
+          <li>✅ Hương khoai môn thơm béo, màu tím đẹp mắt</li>
+          <li>✅ Topping thạch khoai môn miễn phí</li>
+        </ul>
+        <div class="highlight">
+          💥 <strong>Giá ưu đãi:</strong> 129.000đ (Giá gốc: 168.000đ)
+        </div>
+        <p><strong>Thích hợp cho:</strong> Tín đồ khoai môn, hội bạn thân, team văn phòng hoặc buổi chill cuối tuần</p>
+        <a href="./order.html?productId=khoai-mon&name=Trà+sữa+Khoai+Môn+4+ly&price=129000&image=img/tra-sua-khoai-mon.jpg" class="buy-button">Đặt hàng ngay</a>
+        <small class="text-muted d-block mt-2">* Ưu đãi áp dụng đến hết 31/05/2025</small>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Trà Sữa Nhà Làm. Giao hàng nhanh toàn quốc. Hotline: 0909 123 456</p>
+  </footer>
+
+  <!-- Firebase scripts nếu cần -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-app-compat.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-firestore-compat.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-storage-compat.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/11.1.0/firebase-auth-compat.min.js"></script>
+  <script>
+    let userSession = JSON.parse(localStorage.getItem('user_session'));
+  </script>
+  <script src="./js/firebase-config.js"></script>
+</body>
+</html>
